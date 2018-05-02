@@ -22,7 +22,7 @@ import org.springframework.boot.system.ApplicationPidFileWriter;
 public class CrawlerApplication {
     public static void main(String[] args) {
         SpringApplication springApplication = new SpringApplication(CrawlerApplication.class);
-        springApplication.addListeners(new ApplicationPidFileWriter("crawler.pid"));
+        springApplication.addListeners(new ApplicationPidFileWriter("my-crawler.pid"));
         try {
             springApplication.run(args);
         } catch (Throwable t) {

@@ -4,7 +4,7 @@ ENV="prod"
 cd `dirname $0`
 APPLICATION="my-crawler"
 SERVER_PORT=9206
-LOGS_DIR="/data/logs/${APPLICATION}"
+LOGS_DIR="/tmp/logs/${APPLICATION}"
 mkdir -p ${LOGS_DIR}
 HOST_NAME=`hostname`
 SPRING_PROFILE=" -Dspring.profiles.active=${ENV} "
