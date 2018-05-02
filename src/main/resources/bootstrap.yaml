@@ -17,9 +17,9 @@ server:
       directory: "/data/logs/my-crawler/"
       prefix: "access"
       pattern: "%h %l %u %t &quot;%r&quot; %s %b"
-feign:
-  okhttp:
-    enabled: true
+#feign:
+#  okhttp:
+#    enabled: true
 
 ---
 

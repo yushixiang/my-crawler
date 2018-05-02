@@ -14,7 +14,7 @@ public class CrawlerController {
      *
      * @return
      */
-    @RequestMapping(value = "/ping", method = RequestMethod.GET)
+    @RequestMapping(value = "/crawler", method = RequestMethod.GET)
     public Object ping() throws Throwable {
         log.info("pong");
         return "OK";

@@ -10,11 +10,7 @@ import org.springframework.boot.autoconfigure.jooq.JooqAutoConfiguration;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.boot.system.ApplicationPidFileWriter;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
-@EnableFeignClients
-@EnableDiscoveryClient
 @SpringBootApplication(exclude = {
         DataSourceAutoConfiguration.class,
         HibernateJpaAutoConfiguration.class,

@@ -2,7 +2,7 @@
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
     <appender name="file" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/data/logs/my-crawler/my-crawler.log"/>
+        <param name="File" value="/tmp/my-crawler/my-crawler.log"/>
         <param name="Encoding" value="UTF-8"/>
         <param name="DatePattern" value=".yyyyMMdd"/>
         <layout class="org.apache.log4j.PatternLayout">
