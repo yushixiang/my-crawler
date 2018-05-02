@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: my-crawler
+logging:
+  config: classpath:log4j.xml
+server:
+  port: 9206
+  tomcat:
+    max-threads: 1000
+    min-spare-threads: 100
+    max-connections: 10000
+    max-http-post-size: 10485760
+    accept-count: 200
+    uri-encoding: utf-8
+    accesslog:
+      enabled: true
+      directory: "/data/logs/my-crawler/"
+      prefix: "access"
+      pattern: "%h %l %u %t &quot;%r&quot; %s %b"
+feign:
+  okhttp:
+    enabled: true
+
+---
+
+spring:
+  profiles: default
+
+---
+
+spring:
+  profiles: prod
+

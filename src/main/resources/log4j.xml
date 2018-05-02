@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+    <appender name="file" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/data/logs/my-crawler/my-crawler.log"/>
+        <param name="Encoding" value="UTF-8"/>
+        <param name="DatePattern" value=".yyyyMMdd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%-5p %d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] [%X{SessionId}] %l [%m]%n"/>
+        </layout>
+    </appender>
+
+    <logger name="com.test" additivity="false">
+        <level value="info"/>
+        <appender-ref ref="file"/>
+    </logger>
+
+    <!-- dubbo warn/error log -->
+    <logger name="com.alibaba" additivity="false">
+        <level value="warn"/>
+        <appender-ref ref="file"/>
+    </logger>
+
+    <!-- 默认的 logger ,为info-->
+    <root>
+        <level value="error"/>
+        <appender-ref ref="file"/>
+    </root>
+
+</log4j:configuration>
